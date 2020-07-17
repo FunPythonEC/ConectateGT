@@ -1,71 +1,42 @@
-from machine import Pin
-import machine, neopixel
-from urandom import getrandbits
 import network
 import time
 from umqtt.robust import MQTTClient
 import os
+import gc
 import sys
 
-num_leds=50
-pin_salida=17
-np = neopixel.NeoPixel(machine.Pin(pin_salida), num_leds)
+from machine import Pin, I2C
+#from time import sleep
+import BME280
 
-    
-def neopixel(msg):
-    cadena = msg.decode('utf-8').lstrip('#') 
-    
-    rgb = (tuple(int(cadena[i:i+2], 16) for i in (2, 0, 4)))
-    print(rgb)
-    for led in range(num_leds):
-        np[led]=rgb
-    np.write()
+i2c = I2C(scl=Pin(22), sda=Pin(23), freq=10000)
+bme = BME280.BME280(i2c=i2c)
 
 
-#RECIBIR EL DATO DEL SERVIDOR PARA ENCENDER LOS 
-#########################
-# la siguiente función es la devolución de llamada que es
-# llamada cuando se reciben los datos suscritos
-def cb(topic, msg):
-    print((msg))    
-    
-    neopixel(msg)
 
-#CONEXION A LA RED WIFI
-
-# Informacion de la red WiFi
-
+# WiFi connection information
 WIFI_SSID = ''
 WIFI_PASSWORD = ''
-
-
-# apagar el punto de acceso WiFi
+# turn off the WiFi Access Point
 ap_if = network.WLAN(network.AP_IF)
 ap_if.active(False)
 
-# conecta el dispositivo a la red WiFi
+# connect the device to the WiFi network
 wifi = network.WLAN(network.STA_IF)
 wifi.active(True)
 wifi.connect(WIFI_SSID, WIFI_PASSWORD)
 
-# esperar hasta que el dispositivo esté conectado a la red WiFi
+# wait until the device is connected to the WiFi network
 MAX_ATTEMPTS = 20
 attempt_count = 0
-
 while not wifi.isconnected() and attempt_count < MAX_ATTEMPTS:
     attempt_count += 1
     time.sleep(1)
-    print('conectando a la red WiFi...')
-    
-if attempt_count == MAX_ATTEMPTS:
-    print('no se pudo conectar a la red WiFi')
-    sys.exit()
-    
-print('conectado a la red WiFi')
-print ("Configuracion de red: ", wifi.ifconfig())
 
-#CONEXION AL SERVIDOR CONECTATEGT
-#########################       
+if attempt_count == MAX_ATTEMPTS:
+    print('could not connect to the WiFi network')
+    sys.exit()
+
 
 # Cliente MQTT aleatorio
 random_num = int.from_bytes(os.urandom(3), 'little')
@@ -81,7 +52,7 @@ mqtt_client_id = bytes('client_'+str(random_num), 'utf-8')
 
 MQTT_URL = b'galiot.galileo.edu' 
 MQTT_USER = b'nodejp'
-MQTT_TOPIC = b'rgb'
+MQTT_TOPIC = b'temp'
 
 client = MQTTClient(client_id=mqtt_client_id, server=MQTT_URL,               
                     ssl=False)
@@ -95,16 +66,16 @@ except Exception as e:
 
 
 mqtt_feedname = bytes('/{:s}/{:s}'.format(MQTT_USER, MQTT_TOPIC), 'utf-8')  
-client.set_callback(cb)                    
-client.subscribe(mqtt_feedname)  
+PUBLISH_PERIOD_IN_SEC = 3
 
-
-# espere hasta que se hayan publicado los datos en la fuente IO de Adafruit
 while True:
+	
     try:
-        client.wait_msg()
-        
-        
+    
+		temp = bme.temperature
+		client.publish(mqtt_feedname,bytes(str(temp), 'utf-8'),qos=0)
+		print('Publish:  Temperatura = {}C'.format(temp))
+		time.sleep(PUBLISH_PERIOD_IN_SEC)
     except KeyboardInterrupt:
         print('Ctrl-C pressed...exiting')
         client.disconnect()
