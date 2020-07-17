@@ -37,7 +37,7 @@ Enlace a sus repositorios
 1. Descargar el binario de la pagina de micropython dependiendo de tu dispositivo:
 Pyboard, ESP32, ESP8266, WiPy u otro:
 
-    https://micropython.org/dowmloads
+    http://micropython.org/download/
 
 <img src="media/micropython/micropyhton-descargar.png" width="50%"> 
 
