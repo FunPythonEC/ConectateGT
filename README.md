@@ -2,6 +2,8 @@
 
 🤖 Es un evento en línea de un día dónde aprenderás los fundamentos de IoT 🌎
 
+[Transmición en YouTube](https://youtu.be/56bGFpmzRbI)
+
 <p align="center">
   <img width="250" src="media/logo_conectate_gt.png">
 </p>
