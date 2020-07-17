@@ -7,9 +7,13 @@
 </p>
 <br />
 
-## FunPython 
+## Jhon Merchan en FunPython 
 
-![Info Funpython](media/FunPython_triptico.pdf)
+
+![JP](media/jhonMerchan_afiche.jpg)
+
+
+![Triptico informativo sobre Funpython](media/FunPython_triptico.pdf)
 
 
 ## MicroPython
