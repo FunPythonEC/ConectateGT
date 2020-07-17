@@ -45,11 +45,42 @@ Guia paso a paso para instalar la libreria del sensor de temperatura/humedad/pre
 
 Cambiar los pines de conexión de los sensores y luces.
 
+```python
+# linea 10 - 11
+# cantidad de leds rgb y pin de conexión 
+
+num_leds = 50
+pin_salida = 17
+```
+
 Cambiar los parametros de credenciales de la red WiFI.
+
+```python
+# linea 35 - 36
+# Informacion de la red WiFi
+
+WIFI_SSID = ''
+WIFI_PASSWORD = ''
+```
 
 Cambiar las credenciales para conectar al servidor MQTT.
 
 
+```python
+# linea 35 - 36
+# Informacion del servidor MQTT
+# Cambiar el numero del node#
+
+MQTT_URL = b'galiot.galileo.edu' 
+MQTT_TOPIC = b'/node#/rgb'
+
+```
+
+
 Publicar en el servidor MQTT los valores de temperatura y presión.
 
+[mqtt/publish.py](https://github.com/FunPythonEC/ConectateGT/blob/master/mqtt/publish.py)
+
 Subscribirse a la paleta de colores para las luces led rgb.
+
+[mqtt/subscribe.py](https://github.com/FunPythonEC/ConectateGT/blob/master/mqtt/publish.py)
