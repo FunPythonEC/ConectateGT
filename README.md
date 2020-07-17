@@ -10,8 +10,10 @@
 ## Jhon Merchan en FunPython 
 
 
-![JP](media/jhonMerchan_afiche.jpg)
-
+<p align="center">
+  <img width="400" src="media/jhonMerchan_afiche.jpg">
+</p>
+<br />
 
 ![Triptico informativo sobre Funpython](media/FunPython_triptico.pdf)
 
@@ -55,6 +57,11 @@ Cambiar los pines de conexión de los sensores y luces.
 
 num_leds = 50
 pin_salida = 17
+
+# linea 12 pines de I2C
+
+i2c = I2C(scl=Pin(22), sda=Pin(23), freq=10000)
+
 ```
 
 Cambiar los parametros de credenciales de la red WiFI.
@@ -76,7 +83,8 @@ Cambiar las credenciales para conectar al servidor MQTT.
 # Cambiar el numero del node#
 
 MQTT_URL = b'galiot.galileo.edu' 
-MQTT_TOPIC = b'/node#/rgb'
+MQTT_USER = b'node' 
+MQTT_TOPIC = b'temp'
 
 ```
 
