@@ -4,7 +4,10 @@ Descargandola desde internet manualmente o creando tu propia libreria. Y grabarl
 
 Utilizando el comando para cargar el script.py
 
-    ampy -pCOMxx put max7219.py
+    ampy -pCOMxx put bmp085.py
+
+
+[Libreria del sensor de temp/hum](https://github.com/FunPythonEC/ConectateGT/blob/master/Libreria/bmp085.py)
 
 Esperamos unos segundos, un truco es presionar las teclas ``ctrl +  c`` y ejecutar el comando anterior de nuevo
 
