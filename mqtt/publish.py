@@ -51,7 +51,7 @@ mqtt_client_id = bytes('client_'+str(random_num), 'utf-8')
 
 
 MQTT_URL = b'galiot.galileo.edu' 
-MQTT_USER = b'nodejp'
+MQTT_USER = b'node' #cambiar el node
 MQTT_TOPIC = b'temp'
 
 client = MQTTClient(client_id=mqtt_client_id, server=MQTT_URL,               
