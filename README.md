@@ -8,7 +8,6 @@
   <img width="250" src="media/logo_conectate_gt.png">
 </p>
 
-
 ## FunPyhton 
 
 FUNPYTHON ES UNA COMUNIDAD Y RED DE INVESTIGACIÓN E INNOVACIÓN QUE BUSCA UNIR A MENTES CREATIVAS MEDIANTE EL INTERCAMBIO DE IDEAS, EXPERIENCIAS Y
@@ -30,13 +29,11 @@ COLABORACIÓNES.
 
 A nivel de microcontroladores micropython es un sistema operativo, que incluye un subconjunto de librerias importantes de python (la libreria socket es muy similar a la que usamos en un ordenador)y algunas navitvas para controlar proyectos electronicos, ademas de una sheel interactiva, ademas micropython permite utilizar codigo C++ para optimizar su velocidad. Micropython trata de ser multiplataforma al tener compatiblidad con codigo Python normal y poder enviar tu código de la computadora al microcontrolador con total tranquilidad.
 
-
 [Más información sobre python y microcontroladores](pythononhardware.funpython,org) 
 
 ### _Hola Mundo en Ubuntu 20 vs MicroPython_
 
 <img src="media/holamundo.png" width="100%"> 
-
 
 ## Instalar MicroPython
 
@@ -47,7 +44,6 @@ Guia paso a paso con imagenes para instalar MicroPython y sus prerequisitos.
 ## Instalar librerias y uso del sistema de archivos
 
 Guia paso a paso para instalar la libreria del sensor de temperatura/humedad/presion en el ESP32 y guia para manipular archivos de la memoria del ESP32 utulizando la terminal o CMD. 
-
 
 [Tutorial para instalar librerias](https://github.com/FunPythonEC/ConectateGT/blob/master/Instalar_librerias.md)
 
@@ -67,9 +63,7 @@ Cambiar los parametros de credenciales de la red WiFI.
 WIFI_SSID = ''
 WIFI_PASSWORD = ''
 ```
-
 Cambiar las credenciales para conectar al servidor MQTT.
-
 
 ```python
 # linea 35 - 36
