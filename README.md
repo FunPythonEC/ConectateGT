@@ -57,8 +57,8 @@ Guia paso a paso para instalar la libreria del sensor de temperatura/humedad/pre
 Cambiar los parametros de credenciales de la red WiFI.
 
 ```python
-# linea 35 - 36
 # Informacion de la red WiFi
+# Nombre de red y contraseña
 
 WIFI_SSID = ''
 WIFI_PASSWORD = ''
@@ -66,9 +66,8 @@ WIFI_PASSWORD = ''
 Cambiar las credenciales para conectar al servidor MQTT.
 
 ```python
-# linea 35 - 36
 # Informacion del servidor MQTT
-# Cambiar el numero del node#
+# Cambiar el número del node#
 
 MQTT_URL = b'galiot.galileo.edu' 
 MQTT_USER = b'node' 
@@ -82,8 +81,8 @@ MQTT_TOPIC = b'temp'
 
 NeoPixel ring | ESP32
 --------------|------
-IN | 25
-VCC | 5V
+DIN | 25
+VCC | +5V
 GND | GND
 
 ```python
@@ -93,7 +92,7 @@ GND | GND
 num_leds = 10
 pin_salida = 25
 ```
-[mqtt/subscribe_rgb.py](https://github.com/FunPythonEC/ConectateGT/blob/master/mqtt/subscribe_rgb.py)
+[demo/subscribe_rgb.py](https://github.com/FunPythonEC/ConectateGT/blob/master/mqtt/subscribe_rgb.py)
 
 [demo/neopixel_arcoiris.py](https://github.com/FunPythonEC/ConectateGT/blob/master/demo/neopixel_arcoiris.py)
 
@@ -108,11 +107,10 @@ BMP180 | ESP32
 -------|------
 SCL | 22
 SDA | 21
-VCC | 3V3
+VCC | +3V3
 GND | GND
 
 ```python
-# linea 12 pines de I2C
 
 i2c = I2C(scl=Pin(22), sda=Pin(21), freq=10000)
 ```
