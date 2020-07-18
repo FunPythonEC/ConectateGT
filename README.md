@@ -86,7 +86,6 @@ VCC | +5V
 GND | GND
 
 ```python
-# linea 10 - 11
 # cantidad de leds rgb y pin de conexión 
 
 num_leds = 10
