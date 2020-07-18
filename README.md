@@ -1,4 +1,4 @@
-# ConéctateGT - Comunidad Funython & MicroPythonESP32
+# ConéctateGT - Comunidad FunPython & MicroPythonESP32
 
 🤖 Es un evento en línea de un día dónde aprenderás los fundamentos de IoT 🌎
 
@@ -9,18 +9,18 @@
 </p>
 
 
-## Jhon Merchan en FunPython 
-
-<p align="center">
-  <img width="700" src="media/jhonMerchan_afiche.jpg">
-</p>
-
 ## FunPyhton 
 
 FUNPYTHON ES UNA COMUNIDAD Y RED DE INVESTIGACIÓN E INNOVACIÓN QUE BUSCA UNIR A MENTES CREATIVAS MEDIANTE EL INTERCAMBIO DE IDEAS, EXPERIENCIAS Y
 COLABORACIÓNES.
 
-![Triptico informativo sobre Funpython](media/FunPython_triptico.pdf)
+[Triptico informativo sobre Funpython](https://github.com/FunPythonEC/ConectateGT/blob/master/media/FunPython_triptico.pdf)
+
+### Jhon Merchan 🗣️
+
+<p align="center">
+  <img width="700" src="media/jhonMerchan_afiche.jpg">
+</p>
 
 ## MicroPython
 
@@ -31,9 +31,12 @@ COLABORACIÓNES.
 A nivel de microcontroladores micropython es un sistema operativo, que incluye un subconjunto de librerias importantes de python (la libreria socket es muy similar a la que usamos en un ordenador)y algunas navitvas para controlar proyectos electronicos, ademas de una sheel interactiva, ademas micropython permite utilizar codigo C++ para optimizar su velocidad. Micropython trata de ser multiplataforma al tener compatiblidad con codigo Python normal y poder enviar tu código de la computadora al microcontrolador con total tranquilidad.
 
 
+[Más información sobre python y microcontroladores](pythononhardware.funpython,org) 
+
 ### _Hola Mundo en Ubuntu 20 vs MicroPython_
 
 <img src="media/holamundo.png" width="100%"> 
+
 
 ## Instalar MicroPython
 
@@ -41,7 +44,7 @@ Guia paso a paso con imagenes para instalar MicroPython y sus prerequisitos.
 
 [Tutorial en Windows 10](https://github.com/FunPythonEC/ConectateGT/blob/master/Instalando_MicroPython.md)
 
-## Isntalar librerias y sistema de archivos
+## Instalar librerias y uso del sistema de archivos
 
 Guia paso a paso para instalar la libreria del sensor de temperatura/humedad/presion en el ESP32 y guia para manipular archivos de la memoria del ESP32 utulizando la terminal o CMD. 
 
@@ -54,38 +57,6 @@ Guia paso a paso para instalar la libreria del sensor de temperatura/humedad/pre
 
 [Ejemplos básicos con MicroPython](https://github.com/FunPythonEC/ConectateGT/blob/master/ejemplos.md)
 
-Cambiar los pines de conexión de los sensores y luces.
-
-
-### Conectando sensor BMP180 con esp32
-BMP180 | ESP32
---- | ---
-SCL | 22
-SDA | 21
-VCC | 3V3
-GND | GND
-
-```python
-# linea 12 pines de I2C
-
-i2c = I2C(scl=Pin(22), sda=Pin(21), freq=10000)
-```
-
-### Conectando RING LED con esp32
-RING LED | ESP32
---- | ---
-IN | 25
-VCC | 5V
-GND | GND
-
-```python
-
-# linea 10 - 11
-# cantidad de leds rgb y pin de conexión 
-
-num_leds = 10
-pin_salida = 25
-```
 
 Cambiar los parametros de credenciales de la red WiFI.
 
@@ -111,19 +82,50 @@ MQTT_TOPIC = b'temp'
 
 ```
 
-Subscribirse a la paleta de colores para las luces led rgb.
+### Subscribirse a la paleta de colores para las luces led rgb.
 
+**Anillo de leds RGB**
+
+NeoPixel ring | ESP32
+--------------|------
+IN | 25
+VCC | 5V
+GND | GND
+
+```python
+# linea 10 - 11
+# cantidad de leds rgb y pin de conexión 
+
+num_leds = 10
+pin_salida = 25
+```
 [mqtt/subscribe_rgb.py](https://github.com/FunPythonEC/ConectateGT/blob/master/mqtt/subscribe_rgb.py)
-
-Publicar en el servidor MQTT los valores de temperatura y presión.
-
-[demo/publish_bme280.py](https://github.com/FunPythonEC/ConectateGT/blob/master/demo/publish_bme280.py)
-
-[demo/publish_bmep085.py(beta)](https://github.com/FunPythonEC/ConectateGT/blob/master/demo/publish_bmp085.py)
 
 [demo/neopixel_arcoiris.py](https://github.com/FunPythonEC/ConectateGT/blob/master/demo/neopixel_arcoiris.py)
 
 ![Luces, micropython, accion](media/arcoriiris.jpeg)
+
+
+### Publicar en el servidor MQTT los valores de temperatura y presión.
+
+#### Sensor de temperatura/humedad
+
+BMP180 | ESP32
+-------|------
+SCL | 22
+SDA | 21
+VCC | 3V3
+GND | GND
+
+```python
+# linea 12 pines de I2C
+
+i2c = I2C(scl=Pin(22), sda=Pin(21), freq=10000)
+```
+
+[demo/publish_bme280.py](https://github.com/FunPythonEC/ConectateGT/blob/master/demo/publish_bme280.py)
+
+[demo/publish_bmep085.py(beta)](https://github.com/FunPythonEC/ConectateGT/blob/master/demo/publish_bmp085.py)
 
 
 
