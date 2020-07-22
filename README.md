@@ -1,83 +1,81 @@
 # ConéctateGT - Comunidad FunPython & MicroPythonESP32
+[CONÉCTATEGT](http://conectategt.galileo.edu/index.html#) es un evento en línea de un día donde aprenderás los fundamentos de IoT :bulb: :satellite:
 
-🤖 Es un evento en línea de un día dónde aprenderás los fundamentos de IoT 🌎
+Reseña del evento [_El intertnet de las cosas ya es el presente_](https://www.galileo.edu/fisicc/historias-de-exito/conectategt-el-internet-de-las-cosas-ya-es-el-presente) 
 
-[Transmición en YouTube](https://youtu.be/56bGFpmzRbI)
+[Transmición en YouTube ](https://youtu.be/56bGFpmzRbI) ![ E-learning Galileo](https://img.shields.io/youtube/views/56bGFpmzRbI?style=social)
 
 <p align="center">
-  <img width="250" src="media/logo_conectate_gt.png">
+  <img width="200" src="media/logo_conectate_gt.png">
 </p>
 
-## FunPyhton 
+## FunPyhton ![twitter](https://img.shields.io/twitter/follow/funpython_ec?style=social)
 
-FUNPYTHON ES UNA COMUNIDAD Y RED DE INVESTIGACIÓN E INNOVACIÓN QUE BUSCA UNIR A MENTES CREATIVAS MEDIANTE EL INTERCAMBIO DE IDEAS, EXPERIENCIAS Y
-COLABORACIÓNES.
+FunPython es una comunidad técnologica y red de innovación social que busca unir a mentes creativas mediante el intercambio de ideas, experiencias y colaboraciones.
 
-[Triptico informativo sobre Funpython](https://github.com/FunPythonEC/ConectateGT/blob/master/media/FunPython_triptico.pdf)
+[Tríptico informativo sobre Funpython](https://github.com/FunPythonEC/ConectateGT/blob/master/media/FunPython_triptico.pdf)
 
-### Jhon Merchan 🗣️
+### Jhon Merchan ![twitter](https://img.shields.io/twitter/follow/jhon_p16?style=social)
 
 <p align="center">
   <img width="700" src="media/jhonMerchan_afiche.jpg">
 </p>
 
-## MicroPython
-
+## MicroPython ![git-upy](https://img.shields.io/github/stars/MicroPython/MicroPython?style=social)
+ 
 <img src="media/upython-with-micro.jpg" width="80%"> 
 
-[Micropython](http://micropython.org/) es una implementacion ligera de python3. creada por el fisico y programador Damien George en 2014 gracias a una exitosa campaña en [Kickstarter](https://www.kickstarter.com/projects/214379695/micro-python-python-for-microcontrollers), junto a la Pyboard, la placa oficial de micropython, desde entonces se ha portado a diferentes plataformas.
+[MicroPython](http://MicroPython.org/) es una implementación ligera de ![PythonV3](https://img.shields.io/badge/Python-v3-%230b8f2e). Creada por el fisico y programador Damien George en 2014 gracias a una exitosa campaña en [Kickstarter](https://www.kickstarter.com/projects/214379695/micro-python-python-for-microcontrollers), junto a la Pyboard, la placa oficial de MicroPython, desde entonces se ha portado a diferentes plataformas.
 
-A nivel de microcontroladores micropython es un sistema operativo, que incluye un subconjunto de librerias importantes de python (la libreria socket es muy similar a la que usamos en un ordenador)y algunas nativas para controlar proyectos electronicos, ademas de una sheel interactiva, ademas micropython permite utilizar codigo C++ para optimizar su velocidad. Micropython trata de ser multiplataforma al tener compatiblidad con codigo Python normal y poder enviar tu código de la computadora al microcontrolador con total tranquilidad.
+A nivel de microcontroladores MicroPython es un sistema operativo, que incluye un subconjunto de librerías importantes de python (la librería socket es muy similar a la que usamos en un ordenador) y algunas nativas para controlar proyectos electronicos, ademas de una sheel interactiva, ademas MicroPython permite utilizar código C++ para optimizar su velocidad. MicroPython trata de ser multiplataforma al tener compatiblidad con código Python normal y poder enviar tu código de la computadora al microcontrolador con total tranquilidad.
 
 [Más información sobre python y microcontroladores](https://pythononhardware.funpython.org/) 
 
-### _Hola Mundo en Ubuntu 20 vs MicroPython_
+_Hola Mundo en Ubuntu 20 vs MicroPython_
 
 <img src="media/holamundo.png" width="100%"> 
 
-## Instalar MicroPython
+### Instalar MicroPython
 
-Guia paso a paso con imagenes para instalar MicroPython y sus prerequisitos.
+Guía paso a paso con imagenes para instalar MicroPython y sus prerequisitos.
 
 [Tutorial en Windows 10](https://github.com/FunPythonEC/ConectateGT/blob/master/Instalando_MicroPython.md)
 
-## Instalar librerias y uso del sistema de archivos
+### Instalar librerías y uso del sistema de archivos
 
-Guia paso a paso para instalar la libreria del sensor de temperatura/humedad/presion en el ESP32 y guia para manipular archivos de la memoria del ESP32 utulizando la terminal o CMD. 
+Guía paso a paso para instalar la librería del sensor de temperatura/humedad/presión en el ESP32 y guía para manipular archivos de la memoria del ESP32 utilizando la terminal o consola. 
 
-[Tutorial para instalar librerias](https://github.com/FunPythonEC/ConectateGT/blob/master/Instalar_librerias.md)
+[Tutorial para instalar librerías](https://github.com/FunPythonEC/ConectateGT/blob/master/Instalar_librerías.md)
 
 [Tutorial sistema de archivos ESP32](https://github.com/FunPythonEC/ConectateGT/blob/master/sistema_de_archivos.md)
 
-# DEMO
+## DEMO
 
 [Ejemplos básicos con MicroPython](https://github.com/FunPythonEC/ConectateGT/blob/master/ejemplos.md)
 
-
-Cambiar los parametros de credenciales de la red WiFI.
+Cambiar las credenciales de la red WiFI.
 
 ```python
-# Informacion de la red WiFi
+# Información de la red WiFi
 # Nombre de red y contraseña
 
-WIFI_SSID = ''
-WIFI_PASSWORD = ''
+WIFI_SSID = 'tuRed'
+WIFI_PASSWORD = 'tuContraseña'
 ```
 Cambiar las credenciales para conectar al servidor MQTT.
 
 ```python
-# Informacion del servidor MQTT
+# Información del servidor MQTT
 # Cambiar el número del node#
 
 MQTT_URL = b'galiot.galileo.edu' 
 MQTT_USER = b'node' 
 MQTT_TOPIC = b'temp'
-
 ```
 
-### Subscribirse a la paleta de colores para las luces led rgb.
+### Subscribirse a la paleta de colores para las luces led rgb
 
-**Anillo de leds RGB**
+Anillo de leds RGB
 
 NeoPixel ring | ESP32
 --------------|------
@@ -87,7 +85,6 @@ GND | GND
 
 ```python
 # cantidad de leds rgb y pin de conexión 
-
 num_leds = 10
 pin_salida = 25
 ```
@@ -95,12 +92,11 @@ pin_salida = 25
 
 [demo/neopixel_arcoiris.py](https://github.com/FunPythonEC/ConectateGT/blob/master/demo/neopixel_arcoiris.py)
 
-![Luces, micropython, accion](media/arcoriiris.jpeg)
+![Luces, MicroPython, acción](media/arcoriiris.jpeg)
 
+### Publicar en el servidor MQTT los valores de temperatura y presión
 
-### Publicar en el servidor MQTT los valores de temperatura y presión.
-
-#### Sensor de temperatura/humedad
+Sensor de temperatura/humedad
 
 BMP180 | ESP32
 -------|------
@@ -110,13 +106,12 @@ VCC | +3V3
 GND | GND
 
 ```python
-
 i2c = I2C(scl=Pin(22), sda=Pin(21), freq=10000)
 ```
-
 [demo/publish_bme280.py](https://github.com/FunPythonEC/ConectateGT/blob/master/demo/publish_bme280.py)
 
 [demo/publish_bmep085.py(beta)](https://github.com/FunPythonEC/ConectateGT/blob/master/demo/publish_bmp085.py)
 
+![demo-neopixel-mqtt](media/neopixel_mqtt.png)
 
-
+[Documento en versión Web](conectagt.funpython.org/) [![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
