@@ -114,4 +114,4 @@ i2c = I2C(scl=Pin(22), sda=Pin(21), freq=10000)
 
 ![demo-neopixel-mqtt](media/neopixel_mqtt.png)
 
-[Documento en versión Web](https:/conectagt.funpython.org/) [![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://conectagt.funpython.org/)
+[![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://conectagt.funpython.org/)
