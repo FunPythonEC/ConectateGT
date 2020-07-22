@@ -1,5 +1,5 @@
 # ConéctateGT - Comunidad FunPython & MicroPythonESP32
-[CONÉCTATEGT](http://conectategt.galileo.edu/index.html#) es un evento en línea de un día donde aprenderás los fundamentos de IoT :bulb: :satellite:
+[CONÉCTATEGT](http://conectategt.galileo.edu/index.html#) es un evento en línea de un día donde aprenderás los fundamentos de IoT
 
 Reseña del evento [_El intertnet de las cosas ya es el presente_](https://www.galileo.edu/fisicc/historias-de-exito/conectategt-el-internet-de-las-cosas-ya-es-el-presente) 
 
@@ -114,4 +114,4 @@ i2c = I2C(scl=Pin(22), sda=Pin(21), freq=10000)
 
 ![demo-neopixel-mqtt](media/neopixel_mqtt.png)
 
-[Documento en versión Web](conectagt.funpython.org/) [![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
+[Documento en versión Web](https:/conectagt.funpython.org/) [![Open Source Love svg3](https://badges.frapsoft.com/os/v3/open-source.svg?v=103)](https://conectagt.funpython.org/)
